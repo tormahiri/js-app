@@ -9,11 +9,13 @@
 }
 li{
 
-	border-bottom: 2px solid black;
+	border-bottom: 1px solid rgb(228, 145, 85);
+	line-height: 30px;
 
 }
 li >a{
 	color:red;
 	font-size: 18px;
+	margin-top: 20px
 	
 }

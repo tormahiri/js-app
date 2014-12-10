@@ -1,0 +1,202 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left"><a href="#" class="back link"><span>قايتىش</span></a></div>
+    <div class="center sliding">فۇنكىسيەنىڭ سىرى</div>
+    <div class="right">
+
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="about" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-inner">
+         <script type="text/javascript">
+
+         </script>
+         <style type="text/css">
+
+  pre{
+direction: ltr;
+    padding: 8px 0 12px 20px;
+border-left: 4px solid #566D82;
+margin-bottom: 1.25em;
+background: #0F192A;
+color:white;
+}
+  }
+</style>
+
+<body>
+<h2>فۇنكىسيە</h2>
+<p id="content">
+  فۇنكىسيە javascript دا تۇنجى تۈر ئوبيكىتى ھىسابلىنىدۇ،بۇ دىگەنلىك فۇنكىيسەنى باشقا فۇنكسيەلەرگە پارامىتىر شەكلىدە ئۆتكۈزگىلى بولىدۇ،ئادەتتە بۇخىل ئىشلىتىلىش نامسىز فۇنكىيسەنى callback شەكىلدە ئۆتكۈزۈش دەپ ئاتىلىدۇ
+</p>
+<p id="content">
+  فۇنكىسيەنى ئىنىقلاش ئۇسۇلى
+</p>
+<pre>
+  
+  function foo() {}
+</pre>
+<p id="content">
+ئۈستىدكى كود پىروگىرامما باشلىنىپ ئىجرا قىلىنشتىن بۇرۇن ئۆزى ئىنىقلانغان ھەرقانداق دائىر ئىچىدە كۈچكە ئىگە ،ئەگەر بىزبۇنى  ھەقيقى ئىنقلاشتىن بۇرۇن چاقىرساقمۇ يەنىلا ئوخشاش خىزمەت قىلىۋىرىدۇ
+
+</p>
+<pre>
+  foo(); // Works because foo was created before this code runs
+function foo() {}
+</pre>
+<p id="content">
+  
+  ئىپادىلەش فۇنكىسيەسى
+  </br>
+بۇخىل فۇنكىسيەدە بىز نامسىزفۇنكىسيەنى مىقدار fooغا تەقسىملەپ بىرىمىز
+</p>
+<pre>
+foo; // 'undefined'
+foo(); // this raises a TypeError
+var foo = function() {};
+</pre>
+<p id="content">
+var مىقدار ئىنىقلاش ئاچقۇچى بولغاچقا ھەقىقى كود ئىجرا بولۇشتىن foo ئىجرا بولىدۇ
+چۈنكى تەقسىملەش پەقەت ئىجرا مۇھىتىدىلا پەيدا بولىدۇ،fooنىڭ قىممىتى ماس كود ئىجرابولۇشتىن بۇرۇن ئەسلىدىنلا undefined يەنى ئىنىقلانمىغان بولىدۇ
+</p>
+<p id="content">
+  ئىسملىق فۇنكىسيە ئىپادىلەش
+  </br>
+فۇنكىسيەنىڭ باشقىچە بىرخىل ئىپادىلەش ئۇسۇلى
+</p>
+<pre>
+var foo = function bar() {
+    bar(); // Works
+}
+bar(); // ReferenceError  
+
+</pre>
+<p id="content">
+  this نىڭ ئالاھىدىلىكى
+  </br>
+  javascript دىكى this ھالقىلىق سۆزىنىڭ باشقا پىروگىرامما تىلرىىدىكى this قا قارىغاندا باشقىچە ئۇقۇمى بار
+  Javscript دىكى this نىڭ باشقا پىروگىرامما تىللىرىغا قارىغاندا 5 خىل ئوخشىماسلىق بار
+</p>
+<p id="content">
+  ئومۇمى دائىرلىك يەنى (global)  دائىرە
+  </br>
+  this ئومۇمى دائىرە(global)دائىرىسىدە ئىشلىتىلگەندە ئومۇمى دائىرلىك ئوبيكىتقا ئىشارەت قىلىدۇ
+</p>
+<p id="content">
+  فۇنكىسيەنى چاقىرىش
+</p>
+<pre>
+foo();  
+</pre>
+<p id="content">
+  مىتودنى چاقرىش(يەنى ھەرىكەت)
+
+</p>
+<pre>
+  test.foo(); 
+</pre>
+<p id="content">
+  بۇ مىسالدا thisنىڭ ئىشارەت قىلىدىغىنى test()بولىدۇ
+</p>
+<p id="content">
+
+  قۇرۇلمىلىك فۇنكىسيە
+</p>
+<pre>
+  new foo(); 
+</pre>
+<p id="content">
+  فۇنكىسيە new ھالقىلىق سۆزى بىلەن چاقىرىلسا بۇ قۇرۇلمىلىق فۇنكىسيە بولىدۇ.بۇۋاقىتتا قۇرۇلمىلىق فۇنكىسيەنىڭ ئىچىدىكى this يىڭىدىن قۇرۇلغان ئوبيكىتقا ئىشارەت قىلىدۇ
+</p>
+<pre>
+function foo(a, b, c) {}
+
+var bar = {};
+foo.apply(bar, [1, 2, 3]); // array will expand to the below
+foo.call(bar, 1, 2, 3); // results in a = 1, b = 2, c = 3 
+</pre>
+<p id="content">
+Function.prototype نىڭ مىتودى applyۋە callئىشلىتىلگەن ۋاقىتتا,چاقىرىلغان فۇنكىسيەنىڭ ئىچىدىكى this نىڭ قىممىتى ئوچۇق ئاشكارا ھالدا،ماس كىلىدىغان فۇنكىسيە چاقىرىقىنىڭ بىرىنجى پارامىتىرغا تەڭشىلىدۇ 
+</p>
+<p id="content">
+ئورتاق خاتالىق  
+</br>
+گەرچە قارىماققا مەنىسى باردەك قىلسىمۇ ئەمما ،باشقا بىرخاتا لايھەلەنگەن تىل دەپ قاراشقا بولىدۇ،(دىمەكچىمەنكى javascript نىڭ ئازراق كەمچىلىكلىرى بار)
+</p>
+<p id="content">
+  دائىملىق بىر خاتالىق test نىڭ ئىچىدىكى this نىڭ foo غا ئىشارەت قىلىشىدۇر،ئەمىليەتتە ئۇنداق ئەمەس!
+  </br>
+  test نىڭ ئىچىدىن foo غا كىرىش ئۈچۈن،foo غا ئىشارەت قىلىدىغان مىتودنىڭ ئىچىدە يەرلىك ئۆزگەرگۈچى مىقدار قۇرۇش كىرەك
+</p>
+<pre>
+Foo.method = function() {
+    var that = this;
+    function test() {
+        // Use that instead of this here
+    }
+    test();
+} 
+</pre>
+<p id="content">
+that نورمال ئۆزگەرگۈچى مىقدار نامى،بىراق ھەمىشە بۇ سىرتقى this قا قوللانما قىلىشقا ئىشلىتىلىدۇ
+</br>
+مىتودنى تەقسىملەش
+</br>
+javascript دا ئىشلىمەيدىغان يەنە بىرنەرسە بولسا مىتودنى ئۆزگەرگۈچى مىقدارغا تەقسىملەش
+</p>
+<pre>
+var test = someObject.methodTest;
+test(); 
+</pre>
+<p id="content">
+بۇ ئەھۋالدا test()ئاددى فۇنكىسيە چاقىرىقىغا ئوخشاش ئىپادە بىلدۈرىدۇ،شۇڭلاشقا ئىچىدكى this ھالقىلىق سۆزى someobject قا ئىشارەت قىلالالمايدۇ  
+</p>
+<hr></hr>
+<p id="content">
+ئاخىرلاشتۇرۇش ۋە قوللانما(reference)
+</br>
+javascript نىڭ ئەڭ كۈچلۈك ئىقتىدارىنىڭ بىرى ئۇنىڭ ئاخىرلاشتۇرۇش(يەنى چەك دائىرىسنى بىكىتىش )ئىقتىدارىنىڭ بولغانلىقىدۇر،دائىرە يەنى(scope)ئۆزى ئىنىقلانغان دائىرىدە ئچىىدە سىرتقى دائىرە(scope)غا كىرىشنى ساقلاپ قالىدۇ،
+javascript دا فۇننكىسيەنى دائىرىسى بولۇپ،ئەسلدىىنلا ھەممە فۇنكىسيە closure (يەنى ئاخىرلاشتۇرۇش،چىگىراسىنى بەلگىلەشكە)ئوخشاش خۇسۇسىيتى بار 
+</p>
+<hr></hr>
+<p id="content">
+  خۇسۇسى مىقدارنى تەقلىدلەش
+
+</p>
+<pre>
+function Counter(start) {
+    var count = start;
+    return {
+        increment: function() {
+            count++;
+        },
+
+        get: function() {
+            return count;
+        }
+    }
+}
+
+var foo = Counter(4);
+foo.increment();
+foo.get(); // 5 
+</pre>
+<p id="content">
+بۇ كودتا Counter دائىرە closure (يەنى چەك دائىرىسى)بولغان ئىككى دانەincrement ۋە get فۇنكىسيەسىنى قايتۇرىدۇ،بۇ فۇنكىسيەنىڭ ئىككىلىسى  counter نىڭ دائىرىسىگە(scope)غا بىر قوللانمىنى ساقلاپ قالىدۇ،شۇڭلاشقا count ئۆزگەرگۈچى مىقدارغائۆزى ئىنىقلانغان دائىرە ئىچىدە كىرگىلى بولىدۇ  
+</p>
+</body>
+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

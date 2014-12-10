@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "ukij tuz";
+    font-weight: normal;
+    src: url("ukijtuz.ttf") format("TrueType");
+}
+* {
+    font-size: 15px;
+    font-family: "ukij tuz";
+}

@@ -7,3 +7,13 @@
     font-size: 15px;
     font-family: "ukij tuz";
 }
+li{
+
+	border-bottom: 2px solid black;
+
+}
+li >a{
+	color:red;
+	font-size: 18px;
+	
+}

@@ -9,12 +9,12 @@
 }
 li{
 
-	border-bottom: 1px solid rgb(228, 145, 85);
+	border-bottom: 1px solid rgb(202, 194, 189);
 	line-height: 30px;
 
 }
 li >a{
-	color:red;
+	color:black;
 	font-size: 18px;
 	margin-top: 20px
 	
